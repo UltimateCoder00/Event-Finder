@@ -1,3 +1,3 @@
-def event_finder
+class EventFinder
 
 end
