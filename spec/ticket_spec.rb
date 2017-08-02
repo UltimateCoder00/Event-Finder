@@ -3,8 +3,9 @@ require 'ticket'
 describe Ticket do
   subject(:ticket) {described_class.new}
 
-  it 'Checks the price of the ticket' do
+  it 'Initialization' do
     expect(ticket.price).to be_a Integer
+    expect(ticket.sold).to eq false
   end
 
   it '#edit_price' do
