@@ -17,4 +17,9 @@ describe Ticket do
     ticket2.edit_price(new_ticket_price)
     expect(ticket2.price).to eq new_ticket_price
   end
+
+  it '#sell' do
+    ticket.sell
+    expect(ticket.sold).to eq true
+  end
 end
