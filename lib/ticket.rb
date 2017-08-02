@@ -12,6 +12,10 @@ class Ticket
     @price = new_price
   end
 
+  def sell
+    @sold = true
+  end
+
   private
   def optimal_price_generator
     rand(0..MAXIMUM_TICKET_PRICE_IN_PENNIES)
