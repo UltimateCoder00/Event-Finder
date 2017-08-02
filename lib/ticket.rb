@@ -9,10 +9,10 @@ class Ticket
   end
 
   def add_price(price)
-    price == -1 ? declare_price(MAXIMUM_TICKET_PRICE_IN_PENNIES) : @price = price
+    price == -1 ? optimal_price_generator(MAXIMUM_TICKET_PRICE_IN_PENNIES) : @price = price
   end
 
-  def declare_price(max_price)
+  def optimal_price_generator(max_price)
     rand(0..max_price)
   end
 end
