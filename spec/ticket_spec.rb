@@ -8,6 +8,6 @@ describe Ticket do
   end
 
   it '#declare_price' do
-    expect(ticket.optimal_price_generator(Ticket::MAXIMUM_TICKET_PRICE_IN_PENNIES)).to be_a Integer
+    expect(ticket.optimal_price_generator).to be_a Integer
   end
 end
