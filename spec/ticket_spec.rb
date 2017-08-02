@@ -7,22 +7,16 @@ describe Ticket do
     expect(ticket.price).to be_a Integer
   end
 
-  it '#add_price' do
-    ticket_price = 100
-    ticket.add_price(ticket_price)
-    expect(ticket.price).to eq ticket_price
-  end
-
   it '#optimal_price_generator' do
     expect(ticket.optimal_price_generator).to be_a Integer
   end
 
   it '#edit_price' do
     ticket_price = 100
-    ticket.add_price(ticket_price)
+    ticket2 = described_class.new(ticket_price)
 
     new_ticket_price = 200
-    ticket.edit_price(new_ticket_price)
-    expect(ticket.price).to eq new_ticket_price
+    ticket2.edit_price(new_ticket_price)
+    expect(ticket2.price).to eq new_ticket_price
   end
 end
