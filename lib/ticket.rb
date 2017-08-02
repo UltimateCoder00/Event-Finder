@@ -5,7 +5,6 @@ class Ticket
 
   def initialize(price = -1)
     @price = add_price(price)
-
   end
 
   def add_price(price)
@@ -14,5 +13,9 @@ class Ticket
 
   def optimal_price_generator
     rand(0..MAXIMUM_TICKET_PRICE_IN_PENNIES)
+  end
+
+  def edit_price(new_price)
+    @price = new_price
   end
 end
