@@ -22,7 +22,7 @@ describe Ticket do
     ticket.add_price(ticket_price)
 
     new_ticket_price = 200
-    ticket.add_price(new_ticket_price)
+    ticket.edit_price(new_ticket_price)
     expect(ticket.price).to eq new_ticket_price
   end
 end
