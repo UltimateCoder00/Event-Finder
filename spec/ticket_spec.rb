@@ -13,7 +13,7 @@ describe Ticket do
     expect(ticket.price).to eq ticket_price
   end
 
-  it '#declare_price' do
+  it '#optimal_price_generator' do
     expect(ticket.optimal_price_generator).to be_a Integer
   end
 end
