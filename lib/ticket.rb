@@ -9,11 +9,12 @@ class Ticket
   end
 
   def edit_price(new_price)
+    fail "This ticket is already sold" if @sold
     @price = new_price
   end
 
   def sell
-    fail "The ticket is already sold" if @sold
+    fail "This ticket is already sold" if @sold
     @sold = true
   end
 
