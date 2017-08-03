@@ -12,6 +12,7 @@ class Event
   end
 
   def remove_ticket(ticket)
+    fail "This ticket is invalid" unless ticket.class == Ticket
     @tickets.delete(ticket)
   end
 

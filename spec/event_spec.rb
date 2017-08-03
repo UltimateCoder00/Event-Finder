@@ -22,13 +22,21 @@ describe Event do
     end
   end
 
-  it '#remove_ticket' do
-    expect(event.tickets).to eq []
+  context '#remove_ticket' do
+    it 'Remove ticket from event' do
+      expect(event.tickets).to eq []
 
-    ticket = Ticket.new
-    event.add_ticket(ticket)
+      ticket = Ticket.new
+      event.add_ticket(ticket)
 
-    expect(event.remove_ticket(ticket)).to eq ticket
-    expect(event.tickets).to eq []
+      expect(event.remove_ticket(ticket)).to eq ticket
+      expect(event.tickets).to eq []
+    end
+
+    it 'Raises error if the ticket is an invalid type' do
+      ticket = 'This is a ticket'
+      error_message = "This ticket is invalid"
+      expect{event.remove_ticket(ticket)}.to raise_error error_message
+    end
   end
 end
