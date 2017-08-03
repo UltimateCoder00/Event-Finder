@@ -6,6 +6,10 @@ class Event
     @tickets = []
   end
 
+  def add_ticket(ticket)
+    @tickets << ticket
+  end
+
   private
 
   def id_generator
