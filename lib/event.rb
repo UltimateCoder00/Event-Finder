@@ -10,6 +10,10 @@ class Event
     @tickets << ticket
   end
 
+  def remove_ticket(ticket)
+    @tickets.delete(ticket)
+  end
+
   private
 
   def id_generator
