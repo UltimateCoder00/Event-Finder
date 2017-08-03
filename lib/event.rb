@@ -1,3 +1,3 @@
-class EventFinder
-  
+class Event
+
 end
