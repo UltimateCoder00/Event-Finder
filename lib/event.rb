@@ -3,7 +3,7 @@ class Event
 
   def initialize
     @id = id_generator
-    @tickets = []
+    @tickets = adding_tickets_algorithm
   end
 
   def add_ticket(ticket)
@@ -21,6 +21,17 @@ class Event
 
   def id_generator
     rand(0..1000000)
+  end
+
+  def adding_tickets_algorithm
+    random_number = rand(0..10)
+    tickets_array = []
+
+    random_number.times do
+      tickets_array << Ticket.new
+    end
+
+    tickets_array
   end
 
 end

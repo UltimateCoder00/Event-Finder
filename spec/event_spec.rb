@@ -12,7 +12,8 @@ describe Event do
   context '#add_ticket' do
     it 'Add ticket to event' do
       ticket = Ticket.new
-      expect(event.add_ticket(ticket)).to eq [ticket]
+      event.add_ticket(ticket)
+      expect(event.tickets.last).to eq ticket
     end
 
     it 'Raises error if the ticket is an invalid type' do
@@ -24,13 +25,10 @@ describe Event do
 
   context '#remove_ticket' do
     it 'Remove ticket from event' do
-      expect(event.tickets).to eq []
-
       ticket = Ticket.new
       event.add_ticket(ticket)
 
       expect(event.remove_ticket(ticket)).to eq ticket
-      expect(event.tickets).to eq []
     end
 
     describe 'Errors' do
