@@ -7,6 +7,7 @@ class Event
   end
 
   def add_ticket(ticket)
+    fail "This ticket is invalid" unless ticket.class == Ticket
     @tickets << ticket
   end
 
