@@ -1,9 +1,9 @@
 require 'event_finder'
 
-describe 'Event Finder' do
-  describe 'Example Tests' do
-    it 'Calls event_finder method and returns nil' do
-      expect(event_finder).to eq nil
-    end
+describe EventFinder do
+  subject(:event_finder) {described_class.new}
+
+  it 'Initialization' do
+    
   end
 end
