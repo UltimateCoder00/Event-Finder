@@ -13,6 +13,7 @@ class Ticket
   end
 
   def sell
+    fail "The ticket is already sold" if @sold
     @sold = true
   end
 

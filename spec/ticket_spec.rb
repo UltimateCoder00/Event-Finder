@@ -18,8 +18,17 @@ describe Ticket do
     expect(ticket2.price).to eq new_ticket_price
   end
 
-  it '#sell' do
-    ticket.sell
-    expect(ticket.sold).to eq true
+  context '#sell' do
+    it 'Sells the ticket' do
+      ticket.sell
+      expect(ticket.sold).to eq true
+    end
+
+    it 'Raises error if the ticket is already sold' do
+      error_message = "The ticket is already sold"
+
+      ticket.sell
+      expect{ticket.sell}.to raise_error error_message
+    end
   end
 end
