@@ -33,10 +33,18 @@ describe Event do
       expect(event.tickets).to eq []
     end
 
-    it 'Raises error if the ticket is an invalid type' do
-      ticket = 'This is a ticket'
-      error_message = "This ticket is invalid"
-      expect{event.remove_ticket(ticket)}.to raise_error error_message
+    describe 'Errors' do
+      it 'Raises error if the ticket is an invalid type' do
+        ticket = 'This is a ticket'
+        error_message = "This ticket is invalid"
+        expect{event.remove_ticket(ticket)}.to raise_error error_message
+      end
+
+      it 'Raises error if the ticket is not in the event' do
+        ticket = Ticket.new
+        error_message = "This ticket does not belong to this event"
+        expect{event.remove_ticket(ticket)}.to raise_error error_message
+      end
     end
   end
 end

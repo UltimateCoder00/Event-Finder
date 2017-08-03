@@ -13,6 +13,7 @@ class Event
 
   def remove_ticket(ticket)
     fail "This ticket is invalid" unless ticket.class == Ticket
+    fail "This ticket does not belong to this event" unless tickets.include?(ticket)
     @tickets.delete(ticket)
   end
 
