@@ -1,5 +1,6 @@
 class Event
   attr_reader :id, :tickets
+  MAXIMUM_TICKETS_PER_EVENT = 10
 
   def initialize
     @id = id_generator
@@ -24,7 +25,7 @@ class Event
   end
 
   def adding_tickets_algorithm
-    random_number = rand(0..10)
+    random_number = rand(0..MAXIMUM_TICKETS_PER_EVENT)
     tickets_array = []
 
     random_number.times do
