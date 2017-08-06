@@ -13,10 +13,10 @@ class EventFinder
 
     closest_events_list = closest_events_checker_filter(closest_events_list_info)
 
-    puts closest_events_list[0]
-    puts closest_events_list[1]
-    puts closest_events_list[2]
-    puts closest_events_list[3]
+    for i in 0...4
+      puts closest_events_list[i]
+    end
+
     puts closest_events_list[4]
   end
 
@@ -27,38 +27,29 @@ class EventFinder
 
     for i in 0...21
       for j in 0...21
-        if @event_locations.coordinates[i][j] == nil
-          next
-        else
-          x_length = (coordinateX+10 - i).abs
-          y_length = (coordinateY+10 - j).abs
+        next if @event_locations.coordinates[i][j] == nil
 
-          array << [x_length+y_length,i,j]
-        end
+        x_length = (coordinateX+10 - i).abs
+        y_length = (coordinateY+10 - j).abs
+
+        array << [x_length+y_length,i,j]
       end
     end
 
-    array
+    array.sort_by! { |i| i }
   end
 
   def closest_events_checker(available_events)
-    available_events.sort_by! { |i,j,k| i }
-
-    array = []
-
-    for i in 0...5
-      array << available_events[i]
-    end
-
-    array
+    available_events[0..4]
   end
 
   def closest_events_checker_filter(closest_events_list_info)
-    # - Event 006 - $01.40, Distance 12
     array = []
 
     closest_events_list_info.each do |i,j,k|
-      string = "Event #{@event_locations.coordinates[j][k].id} - $#{@event_locations.coordinates[j][k].tickets[0].price / 100.0}, Distance #{i}"
+      id = @event_locations.coordinates[j][k].id
+      ticket_price = @event_locations.coordinates[j][k].tickets[0].price / 100.0
+      string = "Event #{id} - $#{ticket_price}, Distance #{i}"
       array << string
     end
 
