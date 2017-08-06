@@ -14,7 +14,7 @@ to +10 (X axis).
 - The distance between two points should be computed as the Manhattan distance.
 
 ### Instructions
-- You are required to write a program which accepts a user location as a pair of co- ordinates, and returns a list of the five closest events, along with the cheapest ticket price for each event.
+- You are required to write a program which accepts a user location as a pair of co-ordinates, and returns a list of the five closest events, along with the cheapest ticket price for each event.
 - Please detail any assumptions you have made.
 - How might you change your program if you needed to support multiple events at the
 same location?
