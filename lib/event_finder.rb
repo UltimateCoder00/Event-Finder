@@ -13,9 +13,11 @@ class EventFinder
 
     closest_events_list = closest_events_checker_filter(closest_events_list_info)
 
-    closest_events_list.each do |x|
-      p x
-    end
+    puts closest_events_list[0]
+    puts closest_events_list[1]
+    puts closest_events_list[2]
+    puts closest_events_list[3]
+    puts closest_events_list[4]
   end
 
   private
@@ -56,10 +58,8 @@ class EventFinder
     array = []
 
     closest_events_list_info.each do |i,j,k|
-      unless @event_locations.coordinates[j][k] == nil
-        string = "Event #{@event_locations.coordinates[j][k].id} - $#{@event_locations.coordinates[j][k].tickets[0].price / 100.0}, Distance #{i}"
-        array << string
-      end
+      string = "Event #{@event_locations.coordinates[j][k].id} - $#{@event_locations.coordinates[j][k].tickets[0].price / 100.0}, Distance #{i}"
+      array << string
     end
 
     array

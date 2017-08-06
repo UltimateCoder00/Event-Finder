@@ -8,6 +8,6 @@ describe EventFinder do
   end
 
   it '#closest_events_to' do
-    expect(event_finder.closest_events_to(4, 2)).to be_a(Event).or eq(nil)
+    expect(event_finder.closest_events_to(4, 2)).to eq nil
   end
 end
