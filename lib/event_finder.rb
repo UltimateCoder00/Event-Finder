@@ -48,7 +48,13 @@ class EventFinder
 
     closest_events_list_info.each do |i,j,k|
       id = @event_locations.coordinates[j][k].id
-      ticket_price = @event_locations.coordinates[j][k].tickets[0].price / 100.0
+
+      if @event_locations.coordinates[j][k].tickets[0] == nil
+        ticket_price = 0.00
+      else
+        ticket_price = @event_locations.coordinates[j][k].tickets[0].price / 100.0
+      end
+
       string = "Event #{id} - $#{ticket_price}, Distance #{i}"
       array << string
     end
