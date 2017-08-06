@@ -4,6 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/UltimateCoder00/Event-Finder/badges/gpa.svg)](https://codeclimate.com/github/UltimateCoder00/Event-Finder)
 [![Issue Count](https://codeclimate.com/github/UltimateCoder00/Event-Finder/badges/issue_count.svg)](https://codeclimate.com/github/UltimateCoder00/Event-Finder)
 [![BCH compliance](https://bettercodehub.com/edge/badge/UltimateCoder00/Event-Finder?branch=master)](https://bettercodehub.com/)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/UltimateCoder00/Event-Finder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/UltimateCoder00/Event-Finder/?branch=master)
 # Event Finder
 
 ### Installation
