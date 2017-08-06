@@ -1,5 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 [![Build Status](https://travis-ci.org/UltimateCoder00/Event-Finder.svg?branch=master)](https://travis-ci.org/UltimateCoder00/Event-Finder)
+[![Coverage Status](https://coveralls.io/repos/github/UltimateCoder00/Event-Finder/badge.svg?branch=master)](https://coveralls.io/github/UltimateCoder00/Event-Finder?branch=master)
 [![Code Climate](https://codeclimate.com/github/UltimateCoder00/Event-Finder/badges/gpa.svg)](https://codeclimate.com/github/UltimateCoder00/Event-Finder)
 [![Issue Count](https://codeclimate.com/github/UltimateCoder00/Event-Finder/badges/issue_count.svg)](https://codeclimate.com/github/UltimateCoder00/Event-Finder)
 [![BCH compliance](https://bettercodehub.com/edge/badge/UltimateCoder00/Event-Finder?branch=master)](https://bettercodehub.com/)
