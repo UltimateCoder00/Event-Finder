@@ -9,12 +9,13 @@ class EventFinder
 
   def closest_events_to(coordinateX, coordinateY)
     available_events = proximity_scanner(coordinateX, coordinateY)
-    closest_events_list = closest_events_checker(available_events)
+    closest_events_list_info = closest_events_checker(available_events)
 
-    require 'pry'; binding.pry
+    closest_events_list = closest_events_checker_filter(closest_events_list_info)
 
-
-    @event_locations.coordinates[coordinateX+10][coordinateY+10]
+    closest_events_list.each do |x|
+      p x
+    end
   end
 
   private
@@ -45,6 +46,20 @@ class EventFinder
 
     for i in 0...5
       array << available_events[i]
+    end
+
+    array
+  end
+
+  def closest_events_checker_filter(closest_events_list_info)
+    # - Event 006 - $01.40, Distance 12
+    array = []
+
+    closest_events_list_info.each do |i,j,k|
+      unless @event_locations.coordinates[j][k] == nil
+        string = "Event #{@event_locations.coordinates[j][k].id} - $#{@event_locations.coordinates[j][k].tickets[0].price / 100.0}, Distance #{i}"
+        array << string
+      end
     end
 
     array
