@@ -33,8 +33,8 @@ class Event
     random_number.times do
       tickets_array << Ticket.new
     end
-
-    tickets_array
+    
+    tickets_array.sort_by(&:price)
   end
 
 end
