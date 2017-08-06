@@ -1,3 +1,5 @@
+require_relative 'ticket'
+
 class Event
   attr_reader :id, :tickets
   MAXIMUM_TICKETS_PER_EVENT = 10

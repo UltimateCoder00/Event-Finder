@@ -1,3 +1,5 @@
+require_relative 'event'
+
 class Locations
   attr_reader :coordinates
 
@@ -7,13 +9,11 @@ class Locations
 
   private
   def adding_events_algorithm
-    array = Array.new(21) { Array.new(21) }
+    array = Array.new(441)
 
-    array.each do |x|
-      x.map! do |y|
-        if [true, false].sample
-          y = Event.new
-        end
+    array.map! do |x|
+      if [true, false].sample
+        x = Event.new
       end
     end
 
