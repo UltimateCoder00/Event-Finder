@@ -27,13 +27,12 @@ class Event
   end
 
   def adding_tickets_algorithm
-    random_number = rand(0..MAXIMUM_TICKETS_PER_EVENT)
     tickets_array = []
 
-    random_number.times do
+    rand(0..MAXIMUM_TICKETS_PER_EVENT).times do
       tickets_array << Ticket.new
     end
-    
+
     tickets_array.sort_by(&:price)
   end
 
