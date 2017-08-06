@@ -8,7 +8,24 @@
 # Event Finder
 
 ### Installation
-Install Ruby 2.4.0
+Follow the instructions below to install and setup all the tools to use the Event Finder code
+##### Install Ruby Version Manager (RVM)
+Open your terminal and type this line in:
+```
+\curl -L https://get.rvm.io | bash -s stable
+```
+##### Install Ruby 2.4.0
+Open your terminal and type this line in:
+```
+rvm install ruby-2.4.0
+```
+##### Install Code to Local Device
+To install the code on your local device, do the following:
+
+* Clone repository
+* `cd` to the project's root directory
+* Run `gem install bundler`
+* Run `bundle install` to install all of the required gems
 
 ### Scenario
 - Your program should randomly generate seed data.
