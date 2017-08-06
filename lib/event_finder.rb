@@ -8,7 +8,9 @@ class EventFinder
   end
 
   def closest_events_to(coordinateX, coordinateY)
-    array = proximity_scanner(coordinateX, coordinateY)
+    available_events = proximity_scanner(coordinateX, coordinateY)
+    closest_events_list = closest_events_checker(available_events)
+
     require 'pry'; binding.pry
 
 
@@ -31,6 +33,18 @@ class EventFinder
           array << [x_length+y_length,i,j]
         end
       end
+    end
+
+    array
+  end
+
+  def closest_events_checker(available_events)
+    available_events.sort_by! { |i,j,k| i }
+
+    array = []
+
+    for i in 0...5
+      array << available_events[i]
     end
 
     array
