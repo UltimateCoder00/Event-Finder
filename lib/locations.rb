@@ -12,11 +12,7 @@ class Locations
     array = Array.new(21) { Array.new(21) }
 
     array.each do |x|
-      x.map! do |y|
-        if [true, false].sample
-          y = Event.new
-        end
-      end
+      x.map! { |y| y = Event.new if [true, false].sample }
     end
 
     array
