@@ -36,7 +36,7 @@ class EventFinder
       end
     end
 
-    array.sort_by! { |i| i }
+    array.sort_by! {|x| x[0]}
   end
 
   def closest_events_checker(available_events)
