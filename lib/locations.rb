@@ -9,7 +9,7 @@ class Locations
 
   private
   def adding_events_algorithm
-    array = Array.new(441) { Array.new(21) }
+    array = Array.new(21) { Array.new(21) }
 
     array.each do |x|
       x.map! do |y|
