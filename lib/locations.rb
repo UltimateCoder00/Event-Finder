@@ -9,11 +9,13 @@ class Locations
 
   private
   def adding_events_algorithm
-    array = Array.new(441)
+    array = Array.new(441) { Array.new(21) }
 
-    array.map! do |x|
-      if [true, false].sample
-        x = Event.new
+    array.each do |x|
+      x.map! do |y|
+        if [true, false].sample
+          y = Event.new
+        end
       end
     end
 
