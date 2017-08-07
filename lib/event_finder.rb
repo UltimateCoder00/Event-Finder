@@ -13,11 +13,12 @@ class EventFinder
 
     closest_events_list = closest_events_checker_filter(closest_events_list_info)
 
+    puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
     for i in 0...4
-      puts closest_events_list[i]
+      puts (i+1).to_s + ") " + closest_events_list[i]
     end
 
-    puts closest_events_list[4]
+    puts 5.to_s + ") " + closest_events_list[4]
   end
 
   private
