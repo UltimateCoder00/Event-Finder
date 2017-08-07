@@ -113,6 +113,52 @@ Event-Finder git:(master) irb
  5) Event 508444 - $335.75, Distance 2
   => nil
 ```
+
+### Test Driven Development (TDD)
+This program was developed using Rspec and TDD. To run the tests, in the terminal type:
+```
+rspec
+```
+This will return the following output:
+```
+EventFinder
+  Initialization
+The Closest Events to (4,2) are:
+1) Event 148385 - $214.1, Distance 1
+2) Event 743070 - $27.26, Distance 2
+3) Event 403796 - $520.28, Distance 2
+4) Event 126128 - $74.42, Distance 2
+5) Event 808420 - $60.82, Distance 2
+  #closest_events_to
+
+Event
+  Initialization
+  #add_ticket
+    Add ticket to event
+    Raises error if the ticket is an invalid type
+  #remove_ticket
+    Remove ticket from event
+    Errors
+      Raises error if the ticket is an invalid type
+      Raises error if the ticket is not in the event
+
+Locations
+  Initialization
+
+Ticket
+  Initialization
+  #edit_price
+    Edit ticket price
+    Raises error if the ticket is already sold
+  #sell
+    Sells the ticket
+    Raises error if the ticket is already sold
+
+Finished in 0.01744 seconds (files took 0.39691 seconds to load)
+14 examples, 0 failures
+```
+
+
 ### Program extension suggestions and additional assumptions made
 - Please detail any assumptions you have made.
 - How might you change your program if you needed to support multiple events at the
