@@ -6,11 +6,18 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/UltimateCoder00/Event-Finder?branch=master)](https://bettercodehub.com/)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/UltimateCoder00/Event-Finder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/UltimateCoder00/Event-Finder/?branch=master)
 # Event Finder
+### Contents
+- [Summary](#summary)
+- [Description](#description)
+- [Scenario](#scenario)
+- [Installation](#installation)
+- [Code Example](#code_example)
+- [Test Driven Development (TDD)](#tdd)
 
-### Summary
+### <a name="summary">Summary</a>
 A ruby application for finding events in close proximity including cheapest ticket price and distance from a given location.
 
-### Description
+### <a name="description">Description</a>
 We are are required to write a program which accepts a user location as a pair of co-ordinates (x,y), and returns a list of the five closest events, along with the cheapest ticket price for each event.
 
 ##### Example
@@ -23,7 +30,7 @@ An example code is:
 - Event 006 - $01.40, Distance 12
 ```
 
-### Scenario
+### <a name="scenario">Scenario</a>
 The program consists of a world, events, event tickets and event distance from a given location, with the following assumptions:
 
 ##### Program
@@ -44,7 +51,7 @@ to +10 (Y axis).
 ##### Distance
 - The distance between two points should be computed as the Manhattan distance.
 
-### Installation
+### <a name="installation">Installation</a>
 Follow the instructions below to install and setup all the tools to use the Event Finder code
 ##### Install Ruby Version Manager (RVM)
 Open your terminal and type this line in:
@@ -64,7 +71,7 @@ To install the code on your local device, do the following:
 * Run `gem install bundler`
 * Run `bundle install` to install all of the required gems
 
-### Code Example
+### <a name="code_example">Code Example</a>
 Open your terminal and run irb or pry, then run the program. An example is given below:
 ```
 Event-Finder git:(master) irb
@@ -114,7 +121,7 @@ Event-Finder git:(master) irb
   => nil
 ```
 
-### Test Driven Development (TDD)
+### <a name="tdd">Test Driven Development (TDD)</a>
 This program was developed using Rspec and TDD. To run the tests, in the terminal type:
 ```
 rspec
