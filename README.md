@@ -197,9 +197,9 @@ Finished in 0.01744 seconds (files took 0.39691 seconds to load)
 #### Worlds
 ##### Assumptions Made
 - Worlds have a coordinates attribute.
-- Each world can have 0 or 1 event.
-- x coordinates are given from [-10, 10]
-- y coordinates are given from [-10, 10]
+- Each location can have 0 or 1 event.
+- x coordinates are given by the range [-10, 10]
+- y coordinates are given by the range [-10, 10]
 
 ##### Further Improvements
 - Allow each location to hold more than one event.
