@@ -52,11 +52,12 @@ class EventFinder
 
       if @event_locations.coordinates[j][k].tickets[0] == nil
         ticket_price = 0.00
+        string = "Event #{id} has no tickets left"
       else
         ticket_price = @event_locations.coordinates[j][k].tickets[0].price / 100.0
+        string = "Event #{id} - $#{ticket_price}, Distance #{i}"
       end
 
-      string = "Event #{id} - $#{ticket_price}, Distance #{i}"
       array << string
     end
 
