@@ -13,6 +13,7 @@
 - [Installation](#installation)
 - [Code Example](#code_example)
 - [Test Driven Development (TDD)](#tdd)
+- [Further Improvements](#further_improvements)
 
 ### <a name="summary">Summary</a>
 A ruby application for finding events in close proximity including cheapest ticket price and distance from a given location.
@@ -165,8 +166,7 @@ Finished in 0.01744 seconds (files took 0.39691 seconds to load)
 14 examples, 0 failures
 ```
 
-
-### Program extension suggestions and additional assumptions made
+### <a name="further_improvements">Further Improvements</a>
 - Please detail any assumptions you have made.
 - How might you change your program if you needed to support multiple events at the
 same location?
