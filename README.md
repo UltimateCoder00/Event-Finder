@@ -65,7 +65,7 @@ To install the code on your local device, do the following:
 * Run `bundle install` to install all of the required gems
 
 ### Code Example
-Open your terminal and run irb or pry, then run the program. An example below is given:
+Open your terminal and run irb or pry, then run the program. An example is given below:
 ```
 Event-Finder git:(master) irb
 2.4.0 :001 > require './lib/event_finder'
