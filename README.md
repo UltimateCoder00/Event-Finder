@@ -24,7 +24,7 @@ An example code is:
 ```
 
 ### Scenario
-The program consists of a world, events, event tickets and distance from a given location, with the following assumptions:
+The program consists of a world, events, event tickets and event distance from a given location, with the following assumptions:
 
 ##### Program
 - Randomly generated seed data.
