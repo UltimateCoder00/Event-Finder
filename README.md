@@ -24,14 +24,24 @@ An example code is:
 ```
 
 ### Scenario
-We have a program that:
-- Randomly generates seed data.
-- Operates in a world that ranges from -10 to +10 (Y axis), and -10
-to +10 (X axis).
-- Assumes that each co-ordinate can hold a maximum of one event.
+The program consists of a world, events, event tickets and distance from a given location, with the following assumptions:
+
+##### Program
+- Randomly generated seed data.
+
+##### World
+- Operates in a world that ranges from -10 to +10 (X axis), and -10
+to +10 (Y axis).
+- Each co-ordinate can hold a maximum of one event.
+
+##### Event
 - Each event has a unique numeric identifier (e.g. 1, 2, 3).
 - Each event has zero or more tickets.
+
+##### Ticket
 - Each ticket has a non-zero price, expressed in US Dollars.
+
+##### Distance
 - The distance between two points should be computed as the Manhattan distance.
 
 ### Installation
@@ -54,14 +64,6 @@ To install the code on your local device, do the following:
 * Run `gem install bundler`
 * Run `bundle install` to install all of the required gems
 
-### Instructions
-- You are required to write a program which accepts a user location as a pair of co-ordinates, and returns a list of the five closest events, along with the cheapest ticket price for each event.
-- Please detail any assumptions you have made.
-- How might you change your program if you needed to support multiple events at the
-same location?
-- How would you change your program if you were working with a much larger world
-size?
-
 ### Code Example
 
 - Please Input Coordinates: > 4,2
@@ -69,3 +71,10 @@ size?
 - Event 003 - $30.29, Distance 3
 - Event 001 - $35.20, Distance 5
 - Event 006 - $01.40, Distance 12
+
+### Instructions
+- Please detail any assumptions you have made.
+- How might you change your program if you needed to support multiple events at the
+same location?
+- How would you change your program if you were working with a much larger world
+size?
