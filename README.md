@@ -205,7 +205,7 @@ Finished in 0.01744 seconds (files took 0.39691 seconds to load)
 - Allow each location to hold more than one event.
 
 #### Program
-##### Question and answers
-- How might you change your program if you needed to support multiple events at the same location? To support multiple events at the same location, I would change the coordinates attribute in the Locations class from an array to an array of arrays
+##### Question and Answers
+- How might you change your program if you needed to support multiple events at the same location? I would change the instance variable @coordinates attribute in the Locations class from an array to an array of arrays
 - How would you change your program if you were working with a much larger world
-size? To change the program to support a much larger world size, I would change the array within an array dimensions from 21 to x.
+size? I would change the instance variable @coordinates array dimensions from 21 to whatever.
