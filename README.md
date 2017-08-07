@@ -13,7 +13,7 @@
 - [Installation](#installation)
 - [Code Example](#code_example)
 - [Test Driven Development (TDD)](#tdd)
-- [Further Improvements](#further_improvements)
+- [Assumptions & Further Improvements](#assumptions_and_further_improvements)
 
 ### <a name="summary">Summary</a>
 A ruby application for finding events in close proximity including cheapest ticket price and distance from a given location.
@@ -166,9 +166,46 @@ Finished in 0.01744 seconds (files took 0.39691 seconds to load)
 14 examples, 0 failures
 ```
 
-### <a name="further_improvements">Further Improvements</a>
-- Please detail any assumptions you have made.
-- How might you change your program if you needed to support multiple events at the
-same location?
+### <a name="assumptions_and_further_improvements">Assumptions & Further Improvements</a>
+#### Ticket
+##### Assumptions Made
+- Tickets have a price attribute.
+- Tickets have a sold attribute.
+- Ticket prices range from $0.00 to $1000.00.
+- Ticket prices are randomly generated unless user chooses.
+- Tickets can be sold.
+- Ticket prices can be edited.
+
+##### Further Improvements
+- User can edit ticket price and make it negative
+- User can edit ticket price and make it a non-integer
+
+#### Events
+##### Assumptions Made
+- Events have an id attribute.
+- Events have a tickets attribute.
+- Each event can hold between 0 to 10 tickets.
+- Event id's can range from 0 to 1000000
+- Tickets can be added to an event.
+- Tickets can be removed from an event.
+- Event tickets are sorted by ascending order with the cheapest first.
+
+##### Further Improvements
+- Event id's are not necessarily unique.
+- Sold tickets can be added to an event.
+
+#### Worlds
+##### Assumptions Made
+- Worlds have a coordinates attribute.
+- Each world can have 0 or 1 event.
+- x coordinates are given from [-10, 10]
+- y coordinates are given from [-10, 10]
+
+##### Further Improvements
+- Allow each location to hold more than one event.
+
+#### Program
+##### Question and answers
+- How might you change your program if you needed to support multiple events at the same location? To support multiple events at the same location, I would change the coordinates attribute in the Locations class from an array to an array of arrays
 - How would you change your program if you were working with a much larger world
-size?
+size? To change the program to support a much larger world size, I would change the array within an array dimensions from 21 to x.
