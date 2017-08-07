@@ -29,6 +29,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    scrutinizer-ocular (1.0.1)
+      simplecov (>= 0.7)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -47,6 +49,7 @@ DEPENDENCIES
   coveralls
   pry
   rspec
+  scrutinizer-ocular
 
 RUBY VERSION
    ruby 2.4.0p0

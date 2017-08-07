@@ -1,3 +1,6 @@
+require 'scrutinizer/ocular'
+Scrutinizer::Ocular.watch!
+
 require 'coveralls'
 Coveralls.wear!
 
