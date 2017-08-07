@@ -113,7 +113,7 @@ Event-Finder git:(master) irb
  5) Event 508444 - $335.75, Distance 2
   => nil
 ```
-### Instructions
+### Program extension suggestions and additional assumptions made
 - Please detail any assumptions you have made.
 - How might you change your program if you needed to support multiple events at the
 same location?

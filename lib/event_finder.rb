@@ -15,7 +15,7 @@ class EventFinder
 
     puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
     for i in 0...4
-      puts (i+1).to_s + ") " + closest_events_list[i]
+      puts "#{i+1}) " + closest_events_list[i]
     end
 
     puts 5.to_s + ") " + closest_events_list[4]
