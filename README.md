@@ -19,7 +19,7 @@
 A ruby application for finding events in close proximity including cheapest ticket price and distance from a given location.
 
 ### <a name="description">Description</a>
-We are are required to write a program which accepts a user location as a pair of co-ordinates (x,y), and returns a list of the five closest events, along with the cheapest ticket price for each event.
+We are required to write a program which accepts a user location as a pair of co-ordinates (x,y), and returns a list of the five closest events, along with the cheapest ticket price for each event.
 
 ##### Example
 An example code is:
