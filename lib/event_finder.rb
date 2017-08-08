@@ -10,7 +10,6 @@ class EventFinder
   def closest_events_to(coordinateX, coordinateY)
     available_events = proximity_scanner(coordinateX, coordinateY)
     closest_events_list_info = closest_events_checker(available_events)
-
     closest_events_list = closest_events_checker_filter(closest_events_list_info)
 
     puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
@@ -51,7 +50,6 @@ class EventFinder
       id = @event_locations.coordinates[j][k].id
 
       if @event_locations.coordinates[j][k].tickets[0] == nil
-        ticket_price = 0.00
         string = "Event #{id} has no tickets left"
       else
         ticket_price = @event_locations.coordinates[j][k].tickets[0].price / 100.0
