@@ -39,9 +39,9 @@ class EventFinder
     available_events.each do |i,j,k|
       id = @event_locations.coordinates[j][k].id
 
-      if @event_locations.coordinates[j][k].tickets.first == nil
-        puts "#{i+1}) Event #{id} has no tickets left"
-      else
+      puts "#{i+1}) Event #{id} has no tickets left" if @event_locations.coordinates[j][k].tickets.first == nil
+
+      unless @event_locations.coordinates[j][k].tickets.first == nil
         ticket_price = @event_locations.coordinates[j][k].tickets.first.price / division_factor_for_turning_integer_to_dollar_currency
         puts "#{i+1}) Event #{id} - $#{ticket_price}, Distance #{i}"
       end
