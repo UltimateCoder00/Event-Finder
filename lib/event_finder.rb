@@ -25,12 +25,12 @@ class EventFinder
   def proximity_scanner(coordinateX, coordinateY)
     array = []
 
-    for i in 0...21
-      for j in 0...21
+    for i in 0...Locations::X_COORDINATE_RANGE
+      for j in 0...Locations::Y_COORDINATE_RANGE
         next if @event_locations.coordinates[i][j] == nil
 
-        x_length = (coordinateX+10 - i).abs
-        y_length = (coordinateY+10 - j).abs
+        x_length = (coordinateX + (Locations::X_COORDINATE_RANGE / 2) - i).abs
+        y_length = (coordinateY + (Locations::Y_COORDINATE_RANGE / 2) - j).abs
 
         array << [x_length+y_length,i,j]
       end
