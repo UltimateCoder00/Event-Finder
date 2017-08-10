@@ -10,8 +10,7 @@ class EventFinder
 
   def closest_events_to(coordinateX, coordinateY)
     available_events = proximity_scanner(coordinateX, coordinateY)
-    closest_events_list = closest_events_checker(available_events[0...NUMBER_OF_CLOSEST_EVENTS])
-    display_closest_events(closest_events_list, coordinateX, coordinateY)
+    display_closest_events(available_events[0...NUMBER_OF_CLOSEST_EVENTS], coordinateX, coordinateY)
   end
 
   private
@@ -33,31 +32,20 @@ class EventFinder
     array.sort_by! {|x| x[0]}
   end
 
-  def closest_events_checker(available_events)
-    array = []
+  def display_closest_events(available_events, coordinateX, coordinateY)
+    puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
+
     division_factor_for_turning_integer_to_dollar_currency = 100.0
 
     available_events.each do |i,j,k|
       id = @event_locations.coordinates[j][k].id
 
       if @event_locations.coordinates[j][k].tickets.first == nil
-        string = "Event #{id} has no tickets left"
+        puts "#{i+1}) Event #{id} has no tickets left"
       else
         ticket_price = @event_locations.coordinates[j][k].tickets.first.price / division_factor_for_turning_integer_to_dollar_currency
-        string = "Event #{id} - $#{ticket_price}, Distance #{i}"
+        puts "#{i+1}) Event #{id} - $#{ticket_price}, Distance #{i}"
       end
-
-      array << string
-    end
-
-    array
-  end
-
-  def display_closest_events(closest_events_list, coordinateX, coordinateY)
-    puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
-
-    for i in 0...NUMBER_OF_CLOSEST_EVENTS
-      puts "#{i+1}) " + closest_events_list[i]
     end
   end
 end
