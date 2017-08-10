@@ -10,7 +10,8 @@ class EventFinder
 
   def closest_events_to(coordinateX, coordinateY)
     available_events = proximity_scanner(coordinateX, coordinateY)
-    display_closest_events(available_events[0...NUMBER_OF_CLOSEST_EVENTS], coordinateX, coordinateY)
+    puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
+    display_closest_events(available_events[0...NUMBER_OF_CLOSEST_EVENTS])
   end
 
   private
@@ -32,9 +33,7 @@ class EventFinder
     array.sort_by! {|x| x[0]}
   end
 
-  def display_closest_events(available_events, coordinateX, coordinateY)
-    puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
-
+  def display_closest_events(available_events)
     division_factor_for_turning_integer_to_dollar_currency = 100.0
 
     available_events.each do |i,j,k|
