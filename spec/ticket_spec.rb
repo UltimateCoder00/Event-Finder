@@ -3,6 +3,8 @@ require 'ticket'
 describe Ticket do
   subject(:ticket) {described_class.new}
 
+  error_message = "This ticket is already sold"
+
   it 'Initialization' do
     expect(ticket.price).to be_a Integer
     expect(ticket.sold).to eq false
@@ -20,7 +22,6 @@ describe Ticket do
     end
 
     it 'Raises error if the ticket is already sold' do
-      error_message = "This ticket is already sold"
       new_ticket_price = 100
 
       ticket.sell
@@ -28,15 +29,13 @@ describe Ticket do
     end
   end
 
-  context '#sell' do
+  context '#sell' do    
     it 'Sells the ticket' do
       ticket.sell
       expect(ticket.sold).to eq true
     end
 
     it 'Raises error if the ticket is already sold' do
-      error_message = "This ticket is already sold"
-
       ticket.sell
       expect{ticket.sell}.to raise_error error_message
     end
