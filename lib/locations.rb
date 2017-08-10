@@ -12,12 +12,7 @@ class Locations
   private
   def adding_events_algorithm
     array = Array.new(X_COORDINATE_RANGE) { Array.new(Y_COORDINATE_RANGE) }
-
-    array.each do |x|
-      x.map! { Event.new if [true, false].sample }
-    end
-
-    array
+    array.each { |x| x.map! { Event.new if [true, false].sample } }
   end
 
 end
