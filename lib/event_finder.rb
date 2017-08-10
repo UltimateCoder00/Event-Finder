@@ -2,6 +2,7 @@ require_relative 'locations'
 
 class EventFinder
   attr_reader :event_locations
+  NUMBER_OF_CLOSEST_EVENTS = 5
 
   def initialize
     @event_locations = Locations.new
@@ -9,8 +10,7 @@ class EventFinder
 
   def closest_events_to(coordinateX, coordinateY)
     available_events = proximity_scanner(coordinateX, coordinateY)
-    closest_events_list_info = closest_events_checker(available_events)
-    closest_events_list = closest_events_checker_filter(closest_events_list_info)
+    closest_events_list = closest_events_checker(available_events[0...NUMBER_OF_CLOSEST_EVENTS])
 
     puts "The Closest Events to (#{coordinateX},#{coordinateY}) are:"
     for i in 0...4
@@ -39,11 +39,7 @@ class EventFinder
     array.sort_by! {|x| x[0]}
   end
 
-  def closest_events_checker(available_events)
-    available_events[0..4]
-  end
-
-  def closest_events_checker_filter(closest_events_list_info)
+  def closest_events_checker(closest_events_list_info)
     array = []
 
     closest_events_list_info.each do |i,j,k|
