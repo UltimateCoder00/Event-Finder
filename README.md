@@ -14,6 +14,8 @@
 - [Code Example](#code_example)
 - [Test Driven Development (TDD)](#tdd)
 - [Assumptions & Further Improvements](#assumptions_and_further_improvements)
+- [Author](#author)
+- [License](#license)
 
 ### <a name="summary">Summary</a>
 A ruby application for finding events in close proximity including cheapest ticket price and distance from a given location.
@@ -209,3 +211,10 @@ Finished in 0.01744 seconds (files took 0.39691 seconds to load)
 - How might you change your program if you needed to support multiple events at the same location? Change the instance variable @coordinates in the Locations class from an array to an array of arrays
 - How would you change your program if you were working with a much larger world
 size? Increase the instance variable @coordinates array dimensions.
+
+### <a name="author">Author</a>
+- [Hasan Sonmez](https://github.com/UltimateCoder00)
+
+### <a name="license">License</a>
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
